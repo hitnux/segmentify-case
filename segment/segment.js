@@ -133,7 +133,7 @@ class Segment {
     }
 
     fetchData = async () => {
-        await fetch('/data/product-list.json')
+        await fetch('./data/product-list.json')
             .then((response) => response.json())
             .then((data) => {
                 const res = data.responses[0][0].params;
