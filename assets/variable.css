@@ -1,0 +1,11 @@
+:root {
+    --black: #121212;
+    --dark: #30475E;
+    --red: #F05454;
+    --light: #F5F5F5;
+    --spacing-sm: .5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 3rem;
+    --container: 1024px;
+    --title-font: 2rem;
+}

@@ -1,0 +1,300 @@
+.segment-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.tabs {
+    display: flex;
+    overflow-x: hidden;
+    padding: 0;
+    list-style: none;
+}
+
+li.tab {
+    flex-shrink: 0;
+    border-bottom: solid 3px #ddd;
+    cursor: pointer;
+}
+
+li.tab>div {
+    padding: 8px;
+}
+
+li.tab.active {
+    border-color: #4267B2;
+}
+
+.product {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 16px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.product__title {
+    width: 100%;
+    height: 45px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.product__price {
+    font-weight: bold;
+    font-size: 15px;
+    background: #eee;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+.product__image {
+    width: 100%;
+}
+
+.product__info {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.product__action {
+    background: #4267B2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal {
+    position: fixed;
+    top: 64px;
+    right: 16px;
+    display: flex;
+}
+
+.modal {
+    background: #212121;
+    color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    align-items: center;
+    transition: all 1s;
+}
+
+.modal:not(.hide) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal>div {
+    margin: 0 4px;
+}
+
+.modal .close {
+    cursor: pointer;
+}
+
+.modal .btn {
+    font-size: 12px;
+    color: #AEBDCA;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?15497353');
+    src: url('../font/fontello.eot?15497353#iefix') format('embedded-opentype'),
+        url('../font/fontello.woff2?15497353') format('woff2'),
+        url('../font/fontello.woff?15497353') format('woff'),
+        url('../font/fontello.ttf?15497353') format('truetype'),
+        url('../font/fontello.svg?15497353#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?15497353#fontello') format('svg');
+    }
+  }
+  */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-truck:before {
+    content: '\e800';
+}
+
+/* '' */
+.icon-ok-circled:before {
+    content: '\e801';
+    color: green;
+}
+
+/* '' */
+.icon-cancel:before {
+    content: '\e802';
+}
+
+/* '' */
+.icon-record:before {
+    content: '\e803';
+}
+
+/* '' */
+
+
+/**/
+@media (min-width: 1024px) {
+    #segment.segment-container {
+        border: solid 1px #ddd;
+        border-radius: 4px;
+    }
+
+    .segment-title {
+        padding: 16px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .segment-wrapper {
+        flex-direction: row;
+    }
+
+    ul.tabs {
+        width: 20%;
+        flex-direction: column;
+    }
+
+    li.tab {
+        border-bottom: none;
+        border-left: solid 3px #fff;
+    }
+
+    li.tab>div {
+        margin-left: 8px;
+        border-radius: 4px;
+    }
+
+    li.tab.active {
+        border-color: #4267B2;
+        color: #4267B2;
+    }
+
+    li.tab.active>div {
+        background: #EEF1FF;
+    }
+
+    .segment-content {
+        width: 80%;
+        padding-left: 20px;
+    }
+
+    .product {
+        box-shadow: none;
+        border: solid 1px #eee;
+        padding: 8px;
+        width: 20%;
+    }
+
+    .product__action {
+        visibility: hidden;
+    }
+
+    .product:hover .product__action {
+        visibility: visible;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+        top: 25%;
+        background: #fff;
+        opacity: 1 !important;
+        color: #ddd;
+        border-radius: 50%;
+        border: solid 1px #ddd;
+        width: 50px;
+        height: 50px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 20px;
+        position: absolute;
+        top: 30%;
+    }
+
+    .swiper-button-next:after {
+        left: 15px;
+    }
+
+    .swiper-button-prev:after {
+        left: 25px;
+    }
+
+    .swiper-button-next {
+        right: -25px;
+    }
+
+    .swiper-button-prev {
+        left: -25px;
+    }
+
+    [aria-disabled=false] {
+        color: #000;
+    }
+}

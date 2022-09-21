@@ -1,0 +1,34 @@
+@import "variable.css";
+
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0rem;
+}
+
+header,
+footer {
+    color: var(--light);
+
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+header {
+    background-color: var(--black);
+}
+
+main {
+    min-height: calc(100vh - 106px);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+footer {
+    background-color: var(--dark);
+}
+
+h5 {
+    font-size: var(--title-font);
+    margin: var(--spacing-md) 0;
+}
