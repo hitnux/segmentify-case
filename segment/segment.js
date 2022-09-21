@@ -76,9 +76,12 @@ class Segment {
     }
 
     updateTab = () => {
-        const tab = this.element.querySelector('.tab.active').getAttribute('data-tab');
-        this.element.querySelector('.tab-content').innerHTML = document.querySelector(`[data-content="${tab}"]`).innerHTML;
-        this.addToCart();
+        const tab = this.element.querySelector('.tab.active');
+
+        if (tab) {
+            this.element.querySelector('.tab-content').innerHTML = document.querySelector(`[data-content="${tab.getAttribute('data-tab')}"]`).innerHTML;
+            this.addToCart();
+        }
     }
 
     addToCart = () => {
