@@ -23,11 +23,13 @@ class Segment {
     onTabChange = () => {
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
+                const rect = tab.getBoundingClientRect();
                 document.querySelector('.tab.active').classList.remove('active');
                 tab.classList.add('active');
                 this.slider.destroy();
                 this.updateTab();
                 this.createSlider();
+                document.querySelector('.tabs').scrollLeft = rect.left;
             });
         });
     }

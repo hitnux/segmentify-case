@@ -5,9 +5,13 @@
 
 ul.tabs {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     padding: 0;
     list-style: none;
+}
+
+ul.tabs::-webkit-scrollbar {
+    width: 0;
 }
 
 li.tab {
